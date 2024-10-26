@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	/*
+		//white mode
+		// primary: "#32aaff",
+		// "primary-hover": "#149DFF",
+		// "primary-active": "#008FF5",
+		// root: "#ffffff",
+		// "root-100": "#f0f1f3",
+		// neutral: "#242424",
+		// "neutral-100": "#212328",
+		// "neutral-200": "#777777",
+
+		// reverse: "#ffffff",
+		// "reverse-100": "#f0f1f3",
+	*/
+
+	.pplicy h1 {
+		@apply text-3xl font-semibold my-4;
+	}
+
+	.pplicy h2 {
+		@apply text-xl font-semibold my-2;
+	}
+
+	.pplicy ul, .pplicy ol {
+		@apply my-2 list-disc;
+	}
+
+	.pplicy li {
+		@apply mx-4 my-2;
+	}
+
+	.pplicy > p {
+		@apply text-sm;
+	}
+
+	[data-theme="light"] {
+		--color-primary: 50 170 255;
+		--color-primary-hover: 20 157 255;
+		--color-primary-active: 0 143 245;
+
+		--color-root: 255 255 255;
+		--color-root-100: 240 241 243;
+
+		--color-neutral: 25 36 36;
+		--color-neutral-100: 33 35 40;
+		--color-neutral-200: 119 119 119;
+
+		--color-reverse: 255 255 255;
+		--color-reverse-100: 240 241 243;
+
+		--em-background: #ffffff;
+		--em-background-translucent: hsla(0, 0%, 100%, 0.6);
+	}
+
+	[data-theme="dark"] {
+		--color-primary: 50 170 255;
+		--color-primary-hover: 20 157 255;
+		--color-primary-active: 0 143 245;
+		--color-root: 18 19 24;
+		--color-root-100: 34 35 40;
+
+		--color-neutral: 222 239 239;
+		--color-neutral-100: 244 248 240;
+		--color-neutral-200: 182 182 182;
+
+		--color-reverse: 222 239 239;
+		--color-reverse-100: 240 241 243;
+
+		--em-background: #121318;
+		--em-background-translucent: hsla(230, 14%, 8%, 0.6);
+	}
+
+	
+	.CommentsSection {
+		@apply bg-neutral-100
+	}
+
+
+	body {
+		@apply bg-root;
+	}
+
+	/* For Webkit-based browsers (Chrome, Safari and Opera) */
+	.scrollbar-hide::-webkit-scrollbar {
+		display: none;
+	}
+
+	.banner-bg {
+		background: linear-gradient(
+			180deg,
+			var(--em-background-translucent),
+			var(--em-background)
+		);
+	}
+
+	/* For IE, Edge and Firefox */
+	.scrollbar-hide {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+
+	.touch-action {
+		touch-action: none;
+	}
+
+	.line-clamp-1 {
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 1;
+	}
+
+	.line-clamp-2 {
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+	}
+
+	/* width */
+	::-webkit-scrollbar {
+		@apply w-2;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		@apply bg-root-100;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		@apply bg-primary/70 rounded-md;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		@apply bg-primary;
+	}
+
+	.SelectScrollButton {
+		@apply flex items-center justify-center w-full py-0.5;
+	}
+
+	.SelectItem {
+		user-select: none;
+	}
+
+
+
+
+}
